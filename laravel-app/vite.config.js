@@ -1,21 +1,13 @@
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import {
-    defineConfig
-} from 'vite';
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'; // 1. Tambahkan import ini
 
 export default defineConfig({
     plugins: [
+        tailwindcss(), // 2. Tambahkan fungsi ini di dalam array plugins
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
-            ssr: 'resources/js/ssr.jsx',
             refresh: true,
         }),
-        react(),
-        tailwindcss(),
     ],
-    esbuild: {
-        jsx: 'automatic',
-    },
 });

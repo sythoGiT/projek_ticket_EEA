@@ -10,17 +10,17 @@ export default function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
-              <span className="text-xl font-bold text-gray-900">Eventa</span>
+              <span className="text-xl font-bold text-gray-900">EEA</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600">Home</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">About</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">Schedule</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">Speakers</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600">Contact</a>
+              <a href="#" className="px-4 py-2 text-gray-700 rounded-xl transition-all duration-200 ease-out hover:text-blue-600 hover:bg-blue-100 hover:-translate-y-0.5 hover:shadow-sm">Home</a>
+              <a href="#" className="px-4 py-2 text-gray-700 rounded-xl transition-all duration-200 ease-out hover:text-blue-600 hover:bg-blue-100 hover:-translate-y-0.5 hover:shadow-sm">About</a>
+              <a href="#" className="px-4 py-2 text-gray-700 rounded-xl transition-all duration-200 ease-out hover:text-blue-600 hover:bg-blue-100 hover:-translate-y-0.5 hover:shadow-sm">Schedule</a>
+              <a href="#" className="px-4 py-2 text-gray-700 rounded-xl transition-all duration-200 ease-out hover:text-blue-600 hover:bg-blue-100 hover:-translate-y-0.5 hover:shadow-sm">Speakers</a>
+              <a href="#" className="px-4 py-2 text-gray-700 rounded-xl transition-all duration-200 ease-out hover:text-blue-600 hover:bg-blue-100 hover:-translate-y-0.5 hover:shadow-sm">Contact</a>
             </div>
             <div className="flex items-center gap-4">
-              <button className="hidden md:block px-4 py-2 text-gray-700 hover:text-blue-600">
+              <button className="px-8 py-2 bg-white text-gray-700 rounded-full border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all">
                 Login
               </button>
               <button className="px-6 py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white rounded-full hover:shadow-lg transition-shadow">
@@ -41,41 +41,64 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-block px-4 py-2 bg-white rounded-full shadow-md">
-                <span className="text-sm text-gray-700">🎉 Welcome to Eventa 2026</span>
+              <div className="inline-block px-5 py-2.5 rounded-full backdrop-blur-md bg-white/30 border border-white/40 text-gray-800 shadow-lg transition-all duration-300 hover:bg-white/50 hover:shadow-xl hover:-translate-y-0.5">
+                <span className="text-sm text-gray-700">🎉 Electrical Engineering in action</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Make Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">National Seminar</span> & Convention Truly Memorable
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                Make Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ">National Event</span> & Convention Truly Memorable
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 ">
                 Join us for an unforgettable experience with industry leaders, innovative workshops, and networking opportunities that will transform your professional journey.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button className="px-8 py-3 bg-gradient-to-r from-pink-500 to-orange-500 text-white rounded-full hover:shadow-lg transition-all">
-                  Get Started
+                  Get Ticket
                 </button>
                 <button className="px-8 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all">
                   Learn More
                 </button>
               </div>
               <div className="flex items-center gap-6 pt-4">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 border-2 border-white"></div>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">2,500+ Attendees</p>
-                  <p className="text-xs text-gray-500">Already registered</p>
-                </div>
+                <div className="flex -space-x-3 ">
+                  {[
+                  "levi-lei-KvRKc6_LkG8-unsplash.jpg",
+                  "roblokmantep.png",
+                  "mojtaba-mohammadi-azbFk_fV9_U-unsplash.jpg",
+                  "vlcsnap-2026-02-04-15h51m30s166.png",
+                    ].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt="attendee"
+                  className="w-10 h-10 rounded-xl object-cover border-2 border-white"
+                  style={{ zIndex: 10 - i }}
+                  />
+                    ))}
+                  </div>
+              <div>
+                <p className="text-sm font-semibold text-gray-900">2,500+ Attendees</p>
+                <p className="text-xs text-gray-500">Already registered</p>
+              </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative w-full h-96 flex items-center justify-center">
+            <div className="relative w-full h-120 rounded-2xl overflow-hidden 
+[mask-image:radial-gradient(circle,rgba(0,0,0,0.7)_30%,rgba(0,0,0,0.2)_60%,rgba(0,0,0,0)_100%)]
+[-webkit-mask-image:radial-gradient(circle,rgba(0,0,0,0.7)_40%,rgba(0,0,0,0.2)_80%,rgba(0,0,0,0)_100%)]">
+              {/* Background image */}
+              <img
+                src="awan vertikal.jpg"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              {/* Overlay biar ga terlalu rame */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30"></div>
+
+              {/* Logo di depan */}
+              <div className="relative w-full h-full flex items-center justify-center">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1772053969492-51ce746dd84f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjb2xvcmZ1bCUyMHBhaW50JTIwc3BsYXNoJTIwZXhwbG9zaW9uJTIwY3JlYXRpdmV8ZW58MXx8fHwxNzc3NTU4ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Colorful splash"
-                  className="w-full h-full object-contain"
+                  src="logo eea 2026.png"
+                  alt="EEA Logo"
+                  className="w-60 object-contain drop-shadow-lg"
                 />
               </div>
             </div>
